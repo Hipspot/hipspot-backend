@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("place")
 public class PlaceController {
 
-    @GetMapping("/place")
-    public String newPlace() {
+    @GetMapping("/{id}")
+    public String newPlace(PlaceDTO placeDTO, @PathVariable("id") Integer id) {
+
+
         return "metod : get, value : place";
     }
 

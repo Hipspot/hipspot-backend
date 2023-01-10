@@ -1,5 +1,6 @@
 package com.hipspot.data.entity;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -42,4 +43,11 @@ public class TestEntity {
 
     String title;
     String content;
+
+    @Builder
+    public TestEntity(String testid, String title, String content) {
+        Testid = testid;
+        this.title = title;
+        this.content = content;
+    }
 }
