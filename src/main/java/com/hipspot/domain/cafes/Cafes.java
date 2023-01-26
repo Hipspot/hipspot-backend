@@ -35,15 +35,14 @@ public class Cafes {
 
     private Integer amePrice;
 
-    private String address1;
+    private String address;
 
-    private String address2;
 
     private String review;
 
 
     @Builder
-    public Cafes(Long id, String name, String businessTime, String businessDay, String phone, Integer cafePhoto, Integer menuPhoto, String cafeTag, String insta, Integer amePrice, String address1, String address2, String review, String star) {
+    public Cafes(Long id, String name, String businessTime, String businessDay, String phone, Integer cafePhoto, Integer menuPhoto, String cafeTag, String insta, Integer amePrice, String address, String review, String star) {
         this.id = id;
         this.name = name;
         this.BusinessTime = businessTime;
@@ -54,8 +53,7 @@ public class Cafes {
         this.cafeTag = cafeTag;
         this.insta = insta;
         this.amePrice = amePrice;
-        this.address1 = address1;
-        this.address2 = address2;
+        this.address = address;
         this.review = review;
         this.star = star;
     }

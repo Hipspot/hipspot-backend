@@ -25,14 +25,12 @@ public class CafesSaveRequestDto {
 
     private Integer amePrice;
 
-    private String address1;
-
-    private String address2;
+    private String address;
 
     private String review;
 
     @Builder
-    public CafesSaveRequestDto(String name, String time, String phone, Integer cafePhoto, Integer menuPhoto, String cafeTag, String insta, int amePrice, String address1, String address2, String review) {
+    public CafesSaveRequestDto(String name, String time, String phone, Integer cafePhoto, Integer menuPhoto, String cafeTag, String insta, int amePrice, String address, String review) {
         this.name = name;
         this.time = time;
         this.phone = phone;
@@ -41,8 +39,7 @@ public class CafesSaveRequestDto {
         this.cafeTag = cafeTag;
         this.insta = insta;
         this.amePrice = amePrice;
-        this.address1 = address1;
-        this.address2 = address2;
+        this.address = address;
         this.review = review;
     }
 
@@ -56,8 +53,7 @@ public class CafesSaveRequestDto {
                 .cafeTag(cafeTag)
                 .insta(insta)
                 .amePrice(amePrice)
-                .address1(address1)
-                .address2(address2)
+                .address(address)
                 .review(review)
                 .build();
     }

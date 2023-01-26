@@ -18,7 +18,7 @@ public class CafesApiController {
         return cafesService.save(requestDto);
     }
 
-    @GetMapping("/api/cafes/{id}")
+    @GetMapping("/api/cafe/{id}")
     public CafesResponseDto findById (@PathVariable Long id) {
         return cafesService.findById(id);
     }

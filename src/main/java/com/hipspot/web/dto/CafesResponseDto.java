@@ -27,9 +27,7 @@ public class CafesResponseDto {
 
     private Integer amePrice;
 
-    private String address1;
-
-    private String address2;
+    private String address;
 
     private String review;
     private String star;
@@ -46,8 +44,7 @@ public class CafesResponseDto {
         this.cafeTag = entity.getCafeTag();
         this.insta = entity.getInsta();
         this.amePrice = entity.getAmePrice();
-        this.address1 = entity.getAddress1();
-        this.address2 = entity.getAddress2();
+        this.address = entity.getAddress();
         this.review = entity.getReview();
         this.star = entity.getStar();
     }
