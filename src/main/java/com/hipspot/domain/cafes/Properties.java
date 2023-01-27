@@ -1,13 +1,18 @@
-package com.hipspot.web.dto;
+package com.hipspot.domain.cafes;
 
 import com.hipspot.domain.cafes.Geojsons;
+import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.*;
 
 @Getter
-public class GeojsonsResponseDto {
+public class Properties {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String placeName;
@@ -16,19 +21,13 @@ public class GeojsonsResponseDto {
 
     private String instaId;
 
-    private Integer latitude;
 
-    private Integer longitude;
 
     @Builder
-    public GeojsonsResponseDto(Geojsons entity) {
+    public Properties(Geojsons entity) {
         this.id = entity.getId();
         this.placeName = entity.getPlaceName();
         this.filterId = entity.getFilterId();
         this.instaId = entity.getInstaId();
-        this.latitude = entity.getLatitude();
-        this.longitude = entity.getLongitude();
     }
-
-
 }

@@ -1,13 +1,12 @@
 package com.hipspot.domain.cafes;
 
+import antlr.collections.List;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Objects;
 
 @Getter
 @NoArgsConstructor
@@ -17,7 +16,6 @@ public class Geojsons {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String placeName;
 
     private Integer filterId;
@@ -27,6 +25,17 @@ public class Geojsons {
     private Integer latitude;
 
     private Integer longitude;
+
+    /**
+     * 아래와 같이 properties, coordinates dto 객체로 만들고 리스트로 받아오고 싶지만 해결 중 ..
+     */
+
+    @ManyToOne
+    private List<Properties> properties;
+
+    @ElementCollection
+    private List<Integer> coordinates;
+
 
     @Builder
     public Geojsons(Long id, String placeName, Integer filterId, String instaId, Integer latitude, Integer longitude) {
