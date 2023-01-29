@@ -8,11 +8,12 @@ import java.util.List;
 @Getter
 public class GeojsonResponseDto {
     private Properties properties;
-    private List<Integer> coordinates;
+    private Geometry geometry;
+    private String type;
 
-    @Builder
-    public GeojsonResponseDto(GeojsonResponseDto entity) {
-        this.properties = entity.getProperties();
-        this.coordinates = entity.getCoordinates();
+    public GeojsonResponseDto(Properties properties, Geometry geometry, String type) {
+        this.properties = properties;
+        this.geometry = geometry;
+        this.type = type;
     }
 }

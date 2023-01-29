@@ -22,11 +22,11 @@ public class Geojsons {
 
     private String instaId;
 
-    private Integer latitude;
+    private Long latitude;
 
-    private Integer longitude;
+    private Long longitude;
 
-    private List<Properties> propertiesList;
+//    private List<Long> coordinates;
 
     /**
      * properties, coordinates dto 객체로 만들고 리스트로 받아오고 싶지만 해결 중 ..
@@ -34,12 +34,13 @@ public class Geojsons {
 
 
     @Builder
-    public Geojsons(Long id, String placeName, Integer filterId, String instaId, Integer latitude, Integer longitude) {
+    public Geojsons(List<Long> coordinates, Long id, String placeName, Integer filterId, String instaId, Long latitude, Long longitude) {
         this.id = id;
         this.placeName = placeName;
         this.filterId = filterId;
         this.instaId = instaId;
         this.latitude = latitude;
         this.longitude = longitude;
+//        this.coordinates = coordinates;
     }
 }
