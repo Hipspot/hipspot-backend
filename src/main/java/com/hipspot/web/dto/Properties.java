@@ -1,18 +1,14 @@
-package com.hipspot.domain.cafes;
+package com.hipspot.web.dto;
 
 import com.hipspot.domain.cafes.Geojsons;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
 
-import javax.persistence.*;
 
 @Getter
 public class Properties {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String placeName;

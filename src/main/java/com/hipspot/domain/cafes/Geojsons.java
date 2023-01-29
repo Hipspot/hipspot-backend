@@ -1,12 +1,12 @@
 package com.hipspot.domain.cafes;
 
-import antlr.collections.List;
+import com.hipspot.web.dto.Properties;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Objects;
+import java.util.List;
 
 @Getter
 @NoArgsConstructor
@@ -26,15 +26,11 @@ public class Geojsons {
 
     private Integer longitude;
 
+    private List<Properties> propertiesList;
+
     /**
-     * 아래와 같이 properties, coordinates dto 객체로 만들고 리스트로 받아오고 싶지만 해결 중 ..
+     * properties, coordinates dto 객체로 만들고 리스트로 받아오고 싶지만 해결 중 ..
      */
-
-    @ManyToOne
-    private List<Properties> properties;
-
-    @ElementCollection
-    private List<Integer> coordinates;
 
 
     @Builder

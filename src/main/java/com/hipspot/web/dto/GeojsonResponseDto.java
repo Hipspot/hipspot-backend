@@ -7,7 +7,7 @@ import java.util.List;
 
 @Getter
 public class GeojsonResponseDto {
-    private List<String> properties;
+    private Properties properties;
     private List<Integer> coordinates;
 
     @Builder
