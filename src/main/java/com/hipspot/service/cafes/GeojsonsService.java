@@ -30,14 +30,12 @@ public class GeojsonsService {
         Properties properties = new Properties(entity);
         Geometry geometry = new Geometry("Point", coordinates);
         Type type = new Type("Feature");
-
+//
         List<GeojsonResponseDto> geojsonResponseDtoList = new ArrayList<>();
-        geojsonResponseDtoList.add(properties);
-        geojsonResponseDtoList.add(geometry);
-        geojsonResponseDtoList.add(type);
+        GeojsonResponseDto geojsonResponseDto = new GeojsonResponseDto(properties, geometry, type);
+        geojsonResponseDtoList.add(geojsonResponseDto);
 
-
-        return new ;
+        return geojsonResponseDtoList;
     }
 
 }

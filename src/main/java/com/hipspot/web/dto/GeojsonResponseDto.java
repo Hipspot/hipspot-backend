@@ -9,9 +9,9 @@ import java.util.List;
 public class GeojsonResponseDto {
     private Properties properties;
     private Geometry geometry;
-    private String type;
+    private Type type;
 
-    public GeojsonResponseDto(Properties properties, Geometry geometry, String type) {
+    public GeojsonResponseDto(Properties properties, Geometry geometry, Type type) {
         this.properties = properties;
         this.geometry = geometry;
         this.type = type;

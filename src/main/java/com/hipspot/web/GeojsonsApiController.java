@@ -1,5 +1,6 @@
 package com.hipspot.web;
 
+import com.hipspot.generic.Result;
 import com.hipspot.service.cafes.GeojsonsService;
 import com.hipspot.web.dto.GeojsonResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +22,5 @@ public class GeojsonsApiController {
 
         return geojsonsService.findById(id);
     }
-
 
 }
