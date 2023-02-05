@@ -1,19 +1,26 @@
 package com.hipspot.web.dto;
 
-import lombok.Builder;
+import com.hipspot.domain.cafes.Geojsons;
 import lombok.Getter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
 public class GeojsonResponseDto {
-    private Properties properties;
-    private Geometry geometry;
+    private PropertiesDto propertiesDto;
+    private GeometryDto geometryDto;
     private Type type;
 
-    public GeojsonResponseDto(Properties properties, Geometry geometry, Type type) {
-        this.properties = properties;
-        this.geometry = geometry;
-        this.type = type;
+
+    public GeojsonResponseDto(Geojsons entity) {
+        List<Long> coordinates = new ArrayList<>();
+        coordinates.add(entity.getLatitude());
+        coordinates.add(entity.getLongitude());
+        Type point = Type.POINT;
+
+        this.geometryDto = new GeometryDto(point.name(), coordinates);
+        this.propertiesDto = new PropertiesDto(entity);
+        this.type = Type.FEATURE;
     }
 }
