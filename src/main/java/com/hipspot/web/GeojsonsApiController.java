@@ -1,7 +1,8 @@
 package com.hipspot.web;
 
+import com.hipspot.domain.cafes.Geojsons;
 import com.hipspot.generic.Result;
-import com.hipspot.service.cafes.GeojsonsService;
+import com.hipspot.service.GeojsonsService;
 import com.hipspot.web.dto.GeojsonListResponseDto;
 import com.hipspot.web.dto.GeojsonResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -24,9 +25,14 @@ public class GeojsonsApiController {
         return geojsonsService.findById(id);
     }
 
+    @GetMapping("api/geojson1/{id}")
+    public Result findById2(@PathVariable Long id){
+        return new Result(geojsonsService.findById(id));
+    }
+
     @GetMapping("/api/geojsons")
-    public GeojsonListResponseDto findAll() {
-        return geojsonsService.findAll();
+    public Result findAll() {
+        return new Result(geojsonsService.findAll());
     }
 
 }

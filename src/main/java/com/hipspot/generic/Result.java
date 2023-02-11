@@ -1,10 +1,11 @@
 package com.hipspot.generic;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 @Data
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class Result<T> {
     private T data;
 }

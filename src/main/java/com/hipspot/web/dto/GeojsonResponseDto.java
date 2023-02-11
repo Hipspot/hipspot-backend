@@ -14,7 +14,7 @@ public class GeojsonResponseDto {
 
 
     public GeojsonResponseDto(Geojsons entity) {
-        List<Long> coordinates = new ArrayList<>();
+        List<Double> coordinates = new ArrayList<>();
         coordinates.add(entity.getLatitude());
         coordinates.add(entity.getLongitude());
         Type point = Type.POINT;
@@ -22,5 +22,13 @@ public class GeojsonResponseDto {
         this.geometryDto = new GeometryDto(point.name(), coordinates);
         this.propertiesDto = new PropertiesDto(entity);
         this.type = Type.FEATURE;
+    }
+
+    public static List<GeojsonResponseDto> from(List<Geojsons> allGeojsons){
+        List<GeojsonResponseDto> allGeojsonResponseDto = new ArrayList<>();
+        for(Geojsons geojsons : allGeojsons) {
+            allGeojsonResponseDto.add(new GeojsonResponseDto(geojsons));
+        }
+        return allGeojsonResponseDto;
     }
 }

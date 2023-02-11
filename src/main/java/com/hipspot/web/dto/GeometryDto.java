@@ -8,9 +8,9 @@ import java.util.List;
 public class GeometryDto {
 
     private String type;
-    private List<Long> coordinates;
+    private List<Double> coordinates;
 
-    public GeometryDto(String type, List<Long> coordinates) {
+    public GeometryDto(String type, List<Double> coordinates) {
         this.type = type;
         this.coordinates = coordinates;
     }

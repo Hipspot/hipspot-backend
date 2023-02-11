@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Getter
 @NoArgsConstructor
@@ -17,20 +16,20 @@ public class Geojsons {
     private Long id;
     private String placeName;
 
-    private Integer filterId;
+    private String filterList;
 
     private String instaId;
 
-    private Long latitude;
+    private Double latitude;
 
-    private Long longitude;
+    private Double longitude;
 
 
     @Builder
-    public Geojsons(Long id, String placeName, Integer filterId, String instaId, Long latitude, Long longitude) {
+    public Geojsons(Long id, String placeName, String filterList, String instaId, Double latitude, Double longitude) {
         this.id = id;
         this.placeName = placeName;
-        this.filterId = filterId;
+        this.filterList = filterList;
         this.instaId = instaId;
         this.latitude = latitude;
         this.longitude = longitude;
