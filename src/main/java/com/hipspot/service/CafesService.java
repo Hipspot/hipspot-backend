@@ -1,4 +1,4 @@
-package com.hipspot.service.cafes;
+package com.hipspot.service;
 
 import com.hipspot.domain.cafes.Cafes;
 import com.hipspot.domain.cafes.CafesRepository;

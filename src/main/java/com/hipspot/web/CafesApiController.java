@@ -1,7 +1,7 @@
 package com.hipspot.web;
 
 
-import com.hipspot.service.cafes.CafesService;
+import com.hipspot.service.CafesService;
 import com.hipspot.web.dto.CafesResponseDto;
 import com.hipspot.web.dto.CafesSaveRequestDto;
 import lombok.RequiredArgsConstructor;
