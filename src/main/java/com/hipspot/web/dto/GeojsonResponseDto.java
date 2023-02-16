@@ -1,5 +1,6 @@
 package com.hipspot.web.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.hipspot.domain.cafes.Geojsons;
 import lombok.Getter;
 
@@ -8,7 +9,9 @@ import java.util.List;
 
 @Getter
 public class GeojsonResponseDto {
+    @JsonProperty(value = "Property")
     private PropertiesDto propertiesDto;
+    @JsonProperty(value = "Geometry")
     private GeometryDto geometryDto;
     private Type type;
 
@@ -17,11 +20,11 @@ public class GeojsonResponseDto {
         List<Double> coordinates = new ArrayList<>();
         coordinates.add(entity.getLatitude());
         coordinates.add(entity.getLongitude());
-        Type point = Type.POINT;
+        Type point = Type.Point;
 
         this.geometryDto = new GeometryDto(point.name(), coordinates);
         this.propertiesDto = new PropertiesDto(entity);
-        this.type = Type.FEATURE;
+        this.type = Type.Feature;
     }
 
     public static List<GeojsonResponseDto> from(List<Geojsons> allGeojsons){

@@ -25,7 +25,7 @@ public class GeojsonsApiController {
         return geojsonsService.findById(id);
     }
 
-    @GetMapping("api/geojson1/{id}")
+    @GetMapping("/api/geojson1/{id}")
     public Result findById2(@PathVariable Long id){
         return new Result(geojsonsService.findById(id));
     }

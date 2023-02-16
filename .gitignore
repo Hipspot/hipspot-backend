@@ -38,3 +38,5 @@ out/
 
 ### propertiesDto ###
 **/application.propertiesDto
+
+application-oauth.properties
