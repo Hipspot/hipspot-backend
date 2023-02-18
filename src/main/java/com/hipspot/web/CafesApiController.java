@@ -27,5 +27,4 @@ public class CafesApiController {
     public String tset() {
         return "testapi";
     }
-
 }
