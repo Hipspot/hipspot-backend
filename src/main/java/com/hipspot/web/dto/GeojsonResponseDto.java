@@ -9,9 +9,9 @@ import java.util.List;
 
 @Getter
 public class GeojsonResponseDto {
-    @JsonProperty(value = "Property")
+    @JsonProperty(value = "properties")
     private PropertiesDto propertiesDto;
-    @JsonProperty(value = "Geometry")
+    @JsonProperty(value = "geometry")
     private GeometryDto geometryDto;
     private Type type;
 
